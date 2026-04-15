@@ -41,7 +41,7 @@
 
 Предположим, нам надо сохранить таблицу person в csv файл.
 
-![Create table person](./assets/create_table_person.png)
+![Create table person](../assets/lab6/create_table_person.png)
 
 Создаем и заполняем таблицу.
 
@@ -55,9 +55,9 @@ COPY person TO '/home/people_1.csv' DELIMITER ',' CSV HEADER;
 
 Существует и другой способ экспорта через pgAdmin: правой кнопкой мыши по нужной таблице – экспорт – указание параметров экспорта в открывшемся окне.
 
-![Import/Export Data button](./assets/import_export_data_button.png)
+![Import/Export Data button](../assets/lab6/import_export_data_button.png)
 
-![Import/Export Data parameters](./assets/import_export_data_parameters.png)
+![Import/Export Data parameters](../assets/lab6/import_export_data_parameters.png)
 
 В обоих случаях, получаем файл с содержимым таблицы.
 
@@ -79,7 +79,7 @@ COPY person FROM '/home/people.csv' DELIMITER ',' CSV HEADER;
 
 Проверяем, что данные были загружены:
 
-![Check data](./assets/check_data.png)
+![Check data](../assets/lab6/check_data.png)
 
 ### Оконные функции
 
@@ -94,7 +94,7 @@ COPY person FROM '/home/people.csv' DELIMITER ',' CSV HEADER;
 
 Для каждой строки существует набор строк в её разделе, называемый *рамкой окна*. Без ORDER BY рамка по умолчанию состоит из всех строк раздела. С указанием ORDER BY рамка состоит из всех строк от начала раздела до текущей строки и строк, равных текущей по значению выражения ORDER BY. Проверьте разницу результатов кода
 
-![Check difference](./assets/check_difference.png)
+![Check difference](../assets/lab6/check_difference.png)
 
 ### Основные оконные функции
 
@@ -109,7 +109,7 @@ COPY person FROM '/home/people.csv' DELIMITER ',' CSV HEADER;
 
 Ранжирование клиентов по количеству заказов
 
-![Ranking functions examples](./assets/ranking_functions_examples.png)
+![Ranking functions examples](../assets/lab6/ranking_functions_examples.png)
 
 **Агрегатные оконные функции:**
 
@@ -119,7 +119,7 @@ COPY person FROM '/home/people.csv' DELIMITER ',' CSV HEADER;
 
 Сравнение суммы заказа со средним по всем заказам
 
-![Aggregate window functions examples 1](./assets/aggregate_window_functions_examples1.png)
+![Aggregate window functions examples 1](../assets/lab6/aggregate_window_functions_examples1.png)
 
 Добавим инструкцию PARTITION BY - группирует строки запроса в разделы, которые затем обрабатываются оконной функцией независимо друг от друга, работает подобно предложению GROUP BY.
 
@@ -127,7 +127,7 @@ COPY person FROM '/home/people.csv' DELIMITER ',' CSV HEADER;
 
 Сравнение суммы заказа со средней суммы заказа клиента
 
-![Aggregate window functions examples 2](./assets/aggregate_window_functions_examples2.png)
+![Aggregate window functions examples 2](../assets/lab6/aggregate_window_functions_examples2.png)
 
 **Функции смещения:**
 
@@ -140,7 +140,7 @@ COPY person FROM '/home/people.csv' DELIMITER ',' CSV HEADER;
 
 Выведем даты первого заказа заказа клиента, предыдущего и последующего заказов и и перерыв между  текущим и предыдущим заказом.
 
-![Offset functions examples](./assets/offset_functions_examples.png)
+![Offset functions examples](../assets/lab6/offset_functions_examples.png)
 
 ## Контрольные вопросы
 

@@ -34,7 +34,7 @@
 
 Таблица **Items** содержит идентификатор заказа, идентификатор продукта в заказе и его количество, общую сумму по данной позиции.
 
-![Схема таблиц](./assets/tables.png)
+![Схема таблиц](../assets/lab1/tables.png)
 
 ## Теоретическая часть
 
@@ -50,7 +50,7 @@ PostgreSQL является объектно-реляционной СУБД, т
 
 Расположение кластера можно узнать в терминале:
 
-![Cluster location](assets/cluster_location.png)
+![Cluster location](../assets/lab1/cluster_location.png)
 
 Все конфигурации сервера хранятся в **postgresql.conf** файле.
 
@@ -156,11 +156,11 @@ service postgresql start
 **Пример.** Создать базу данных sales:
 
 1. Щелкните ПКМ по элементу Базы данных в Обозревателе и выберите Создать > База данных…
-![Создание Бд](./assets/database_creating.jpg)
+![Создание Бд](../assets/lab1/database_creating.jpg)
 
 2. Во вкладке *General* укажите название базы данных.
 *Прим.* Во вкладке SQL автоматически сгенерируется SQL-запрос на создание БД:
-![Создание Бд](./assets/database_creating_sql.jpg)
+![Создание Бд](../assets/lab1/database_creating_sql.jpg)
 
 3. Нажмите *Сохранить*
 
@@ -427,7 +427,7 @@ CREATE TABLE orders (
 ### Пример создания таблицы с помощью SQL-запросов
 
 Для написания SQL-запросов откройте **Query Editor** в pgAdmin. (Вкладка Tools -> Query Tool.)
-![Query Editor](./assets/query_editor.jpg)
+![Query Editor](../assets/lab1/query_editor.jpg)
 
 Создаем таблицу Orders, содержащую поля: id, customer_id, order_date, ship_date, paid_date, status.
 
@@ -467,15 +467,15 @@ REFERENCES customers(customer_id);
 
 Для создания таблицы необходимо раскрыть Databases → Ваша база данных → Schemas. Нажать правой кнопкой мыши на Tables (Таблицы) и выбрать Create → Table.
 
-![Create Table](./assets/create_table.jpg)
+![Create Table](../assets/lab1/create_table.jpg)
 
 В окне создания таблицы ввести название в поле Name.
 
-![Create Table](./assets/create_table_general.jpg)
+![Create Table](../assets/lab1/create_table_general.jpg)
 
 Столбцы в таблицах можно создать при создании таблицы. Для добавления столбца надо перейти во вкладку Columns, нажать на знак + и ввести данные о столбце. Также при необходимости можно выбрать таблицу, от которой наследуется данная таблицы. Сохранить таблицу. Нажать кнопку «Save».
 
-![Create Table](./assets/create_table_columns.jpg)
+![Create Table](../assets/lab1/create_table_columns.jpg)
 
 ### Использование проверочных ограничений (задание лабораторной работы)
 
@@ -488,7 +488,7 @@ REFERENCES customers(customer_id);
     ship_date >= order_date
     ```
 
-    ![Constraints](./assets/constraints.jpg)
+    ![Constraints](../assets/lab1/constraints.jpg)
 
 3. Сохраните изменения.
 
@@ -557,11 +557,11 @@ UPDATE orders SET ship_date = CURRENT_DATE WHERE status='Р';
 
 Для создания схемы БД щелкните ПКМ по элементу Базы данных в Обозревателе и выберите Generate ERD.
 
-![ERD](./assets/generate_erd.jpg)
+![ERD](../assets/lab1/generate_erd.jpg)
 
 В результате должна получиться следующая схема:
 
-![ERD](./assets/erd.jpg)
+![ERD](../assets/lab1/erd.jpg)
 
 ### Создание дампа БД
 
@@ -571,7 +571,7 @@ UPDATE orders SET ship_date = CURRENT_DATE WHERE status='Р';
 
 Заходим в pgAdmin, находим нужную базу данных, нажимаем правой кнопкой мыши на нее и выбираем Backup. В появившимся окне нажимаем на троеточие (выбор папки). Выбираем нужную папку, далее вводим название файла (предварительно может понадобиться создать пустой файл с расширением .sql или .backup.) Запускаем Backup.
 
-![Dump](./assets/dump.png)
+![Dump](../assets/lab1/dump.png)
 
 ### Контрольные вопросы
 

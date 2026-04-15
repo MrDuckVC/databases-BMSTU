@@ -156,31 +156,31 @@ ALTER VIEW vBOOKS SET (check_option='cascaded');
 
 С помощью pgAdmin подключимся к базе данных и в разделе Login/Group Roles вызовем контекстное меню и выберем Create — Login/Group Role.
 
-![Create — Group Role](./assets/create_group_role.jpg)
+![Create — Group Role](../assets/lab3/create_group_role.jpg)
 
 Появится диалоговое окно с несколькими вкладками. На первой вкладке укажем имя пользователя, при желании можно указать его описание в поле Comments:
 
-![Create — Group Role General](./assets/create_group_role_general.jpg)
+![Create — Group Role General](../assets/lab3/create_group_role_general.jpg)
 
 На вкладке Definition зададим пароль. Тут же можно указать дату истечения, после которого пользователю обязательно нужно будет сменить пароль:
 
-![Create — Group Role Definition](./assets/create_group_role_definition.jpg)
+![Create — Group Role Definition](../assets/lab3/create_group_role_definition.jpg)
 
 На вкладке Privileges можно указать, какими полномочиями будет обладать пользователь: логиниться, создавать другие роли или базы данных, будет ли это суперпользователь и т.п. Мы выберем лишь опцию Login, остальное оставим по умолчанию:
 
-![Create — Group Role Privileges](assets/create_group_role_privileges.jpg)
+![Create — Group Role Privileges](../assets/lab3/create_group_role_privileges.jpg)
 
 На вкладке Membership можно присвоить пользователю роли. Для примера мы присвоим ему встроенную в Postgres роль pg_monitor, которая дает права на просмотр различных таблиц и представлений, связанных с мониторингом и диагностикой базы данных:
 
-![Create — Group Role Membership](assets/create_group_role_membership.jpg)
+![Create — Group Role Membership](../assets/lab3/create_group_role_membership.jpg)
 
 На последней вкладке SQL можно увидеть SQL-команды, с помощью которых будет создан пользователь. Запоминать и копировать их не обязательно, pgAdmin выполнит их за нас. Эта вкладка нужна скорее для финальной проверки.
 
-![Create — Group Role SQL](assets/create_group_role_sql.jpg)
+![Create — Group Role SQL](../assets/lab3/create_group_role_sql.jpg)
 
 Нажимаем на кнопку Save, и пользователь создается. Мы можем увидеть его в разделе Login/Group Roles или с набрав `SELECT rolname FROM pg_roles`:
 
-![Group Role List](assets/group_role_list.jpg)
+![Group Role List](../assets/lab3/group_role_list.jpg)
 
 ## Добавление и удаление прав с помощью групп
 
@@ -220,7 +220,7 @@ GRANT read_only_role TO selectel_user;
 
 Снова попробуем выполнить запрос от имени пользователя и увидим результат:
 
-![Group Role](assets/all_person_result.jpg)
+![Group Role](../assets/lab3/all_person_result.jpg)
 
 Теперь попробуем вставить строку в таблицу:
 
