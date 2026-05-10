@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>900</width><height>650</height></rect></property>
+  <property name="windowTitle"><string>АИС «Магазин бытовых товаров» — Панель управления</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+
+    <item>
+     <widget class="QLabel" name="lblWelcome">
+      <property name="font"><font><pointsize>14</pointsize><bold>true</bold></font></property>
+      <property name="text"><string>Добро пожаловать в систему!</string></property>
+      <property name="alignment"><set>Qt::AlignCenter</set></property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QGroupBox" name="gbAdmin">
+      <property name="title"><string>ПАНЕЛЬ АДМИНИСТРАТОРА</string></property>
+      <layout class="QGridLayout" name="adminGridLayout">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="gbNsi">
+         <property name="title"><string>Справочники</string></property>
+         <layout class="QVBoxLayout" name="v1">
+          <item><widget class="QPushButton" name="btnCategories"><property name="text"><string>Категории товаров</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnProducts"><property name="text"><string>Каталог (Товары)</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnEmployees"><property name="text"><string>Сотрудники</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnSuppliers"><property name="text"><string>Поставщики</string></property></widget></item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="gbLogistics">
+         <property name="title"><string>Склад и закупки</string></property>
+         <layout class="QVBoxLayout" name="v2">
+          <item><widget class="QPushButton" name="btnSupplies"><property name="text"><string>Оформить поставку</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnStockReport"><property name="text"><string>Отчет по остаткам</string></property></widget></item>
+          <item><spacer name="s1"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="gbAnalytics">
+         <property name="title"><string>Аналитика и отчеты</string></property>
+         <layout class="QVBoxLayout" name="v3">
+          <item><widget class="QPushButton" name="btnKpi"><property name="text"><string>КПЭ сотрудников</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnSalesMatrix"><property name="text"><string>Матрица продаж</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnOrdersChart"><property name="text"><string>Диаграмма заказов</string></property></widget></item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QGroupBox" name="gbSystem">
+         <property name="title"><string>Система</string></property>
+         <layout class="QVBoxLayout" name="v4">
+          <item><widget class="QPushButton" name="btnUsers"><property name="styleSheet"><string>color: darkblue; font-weight: bold;</string></property><property name="text"><string>Права доступа (Пользователи)</string></property></widget></item>
+          <item><spacer name="s2"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QGroupBox" name="gbManager">
+      <property name="title"><string>ПАНЕЛЬ МЕНЕДЖЕРА</string></property>
+      <layout class="QGridLayout" name="managerGridLayout">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="gbManagerNsi">
+         <property name="title"><string>Работа с клиентами и товарами</string></property>
+         <layout class="QVBoxLayout" name="v5">
+          <item><widget class="QPushButton" name="btnClients"><property name="text"><string>Справочник клиентов</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnCatalog"><property name="text"><string>Просмотр каталога</string></property></widget></item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="gbManagerSales">
+         <property name="title"><string>Продажи</string></property>
+         <layout class="QVBoxLayout" name="v6">
+          <item><widget class="QPushButton" name="btnOrders"><property name="styleSheet"><string>font-weight: bold; color: darkgreen; padding: 10px;</string></property><property name="text"><string>Оформить новый заказ</string></property></widget></item>
+          <item><spacer name="s3"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QGroupBox" name="gbManagerHistory">
+         <property name="title"><string>История и документы</string></property>
+         <layout class="QVBoxLayout" name="v7">
+          <item><widget class="QPushButton" name="btnOrderHistory"><property name="text"><string>История заказов</string></property></widget></item>
+          <item><spacer name="s4"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation"><enum>Qt::Vertical</enum></property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+</ui>

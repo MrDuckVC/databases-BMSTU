@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChartViewDialog</class>
+ <widget class="QDialog" name="ChartViewDialog">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>800</width><height>500</height></rect></property>
+  <property name="windowTitle"><string>Аналитика: Диаграмма выручки</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="chartLayout"/> </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnPrint">
+       <property name="text"><string>Печать (в PDF)</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClose">
+       <property name="text"><string>Закрыть диаграмму</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <connections>
+  <connection>
+   <sender>btnClose</sender>
+   <signal>clicked()</signal>
+   <receiver>ChartViewDialog</receiver>
+   <slot>accept()</slot>
+  </connection>
+ </connections>
+</ui>

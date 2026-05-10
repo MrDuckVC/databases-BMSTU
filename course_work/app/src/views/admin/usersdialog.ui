@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UsersDialog</class>
+ <widget class="QDialog" name="UsersDialog">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>700</width><height>450</height></rect></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title"><string>Данные учетной записи</string></property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0"><widget class="QLabel" name="label"><property name="text"><string>Сотрудник:</string></property></widget></item>
+      <item row="0" column="1"><widget class="QComboBox" name="cbEmployees"/></item>
+
+      <item row="1" column="0"><widget class="QLabel" name="label_2"><property name="text"><string>Логин:</string></property></widget></item>
+      <item row="1" column="1"><widget class="QLineEdit" name="leLogin"/></item>
+
+      <item row="2" column="0"><widget class="QLabel" name="label_3"><property name="text"><string>Новый пароль:</string></property></widget></item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lePassword">
+        <property name="placeholderText"><string>Оставьте пустым для сохранения текущего пароля</string></property>
+       </widget>
+      </item>
+
+      <item row="3" column="0"><widget class="QLabel" name="label_4"><property name="text"><string>Роль в системе:</string></property></widget></item>
+      <item row="3" column="1"><widget class="QComboBox" name="cbRole"/></item>
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item><spacer name="horizontalSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item><widget class="QPushButton" name="btnDelete"><property name="text"><string>Удалить доступ</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnSave"><property name="text"><string>Сохранить / Обновить</string></property></widget></item>
+    </layout>
+   </item>
+
+   <item>
+    <widget class="QTableView" name="tvUsers"/>
+   </item>
+  </layout>
+ </widget>
+</ui>

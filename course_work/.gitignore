@@ -1,0 +1,27 @@
+# Папки сборки (shadow build)
+build/
+build-*/
+debug/
+release/
+
+# Объектные и исполняемые файлы
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+
+# Специфичные файлы Qt
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Makefile*
+
+# Файлы CMake (если решишь использовать его вместо qmake)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake

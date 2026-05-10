@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SuppliesDialog</class>
+ <widget class="QDialog" name="SuppliesDialog">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>700</width><height>500</height></rect></property>
+  <property name="windowTitle"><string>Регистрация поставки</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="gbSupplier">
+     <property name="title"><string>1. Выбор поставщика</string></property>
+     <layout class="QHBoxLayout" name="h1">
+      <item><widget class="QLabel" name="l1"><property name="text"><string>Поставщик:</string></property></widget></item>
+      <item><widget class="QComboBox" name="cbSuppliers"/></item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="gbItems">
+     <property name="title"><string>2. Формирование списка товаров</string></property>
+     <layout class="QHBoxLayout" name="h2">
+      <item><widget class="QComboBox" name="cbProducts"><property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Fixed"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property></widget></item>
+      <item><widget class="QSpinBox" name="sbQty"><property name="minimum"><number>1</number></property><property name="maximum"><number>9999</number></property></widget></item>
+      <item><widget class="QPushButton" name="btnAddItem"><property name="text"><string>В список</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnRemoveItem"><property name="text"><string>Удалить из списка</string></property></widget></item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableView" name="tvSupply">
+     <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="h3">
+     <item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item><widget class="QPushButton" name="btnProcess"><property name="text"><string>Провести поставку</string></property><property name="minimumSize"><size><width>160</width><height>40</height></size></property></widget></item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+</ui>
