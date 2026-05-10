@@ -4,27 +4,28 @@
 #include <QDialog>
 #include <QSqlQueryModel>
 
-namespace Ui { class UsersDialog; }
+namespace Ui {
+class UsersDialog;
+}
 
-class UsersDialog : public QDialog
-{
-    Q_OBJECT
+class UsersDialog : public QDialog {
+  Q_OBJECT
 
 public:
-    explicit UsersDialog(QWidget *parent = nullptr);
-    ~UsersDialog();
+  explicit UsersDialog(QWidget *parent = nullptr);
+  ~UsersDialog();
 
 private slots:
-    void on_btnSave_clicked();
-    void on_btnDelete_clicked();
-    void on_tvUsers_clicked(const QModelIndex &index);
+  void on_btnSave_clicked();
+  void on_btnDelete_clicked();
+  void on_tvUsers_clicked(const QModelIndex &index);
 
 private:
-    Ui::UsersDialog *ui;
-    QSqlQueryModel *m_usersModel;
+  Ui::UsersDialog *ui;
+  QSqlQueryModel *m_usersModel;
 
-    void loadEmployees();
-    void updateUsersTable();
+  void loadEmployees();
+  void updateUsersTable();
 };
 
 #endif // USERSDIALOG_H

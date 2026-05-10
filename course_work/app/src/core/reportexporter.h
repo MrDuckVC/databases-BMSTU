@@ -6,9 +6,9 @@
 
 class ReportExporter {
 public:
-    // Экспорт любой табличной модели в PDF файл
-    static bool exportToPdf(const QString &title, const QString &summary,
-                            QAbstractItemModel *model, bool isMatrix = false);
+  // Экспорт любой табличной модели в PDF файл
+  static bool exportToPdf(const QString &title, const QString &summary,
+                          QAbstractItemModel *model, bool isMatrix = false);
 };
 
 #endif // REPORTEXPORTER_H

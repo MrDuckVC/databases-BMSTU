@@ -5,18 +5,18 @@
 
 class DatabaseManager {
 public:
-    static DatabaseManager &instance();
-    bool connectToDatabase();
-    void disconnectFromDatabase();
-    QSqlDatabase getDatabase() const;
+  static DatabaseManager &instance();
+  bool connectToDatabase();
+  void disconnectFromDatabase();
+  QSqlDatabase getDatabase() const;
 
 private:
-    DatabaseManager();
-    ~DatabaseManager();
-    DatabaseManager(const DatabaseManager &) = delete;
-    DatabaseManager &operator=(const DatabaseManager &) = delete;
+  DatabaseManager();
+  ~DatabaseManager();
+  DatabaseManager(const DatabaseManager &) = delete;
+  DatabaseManager &operator=(const DatabaseManager &) = delete;
 
-    QSqlDatabase db;
+  QSqlDatabase db;
 };
 
 #endif // DATABASEMANAGER_H

@@ -3,26 +3,27 @@
 
 #include <QDialog>
 
-namespace Ui { class LoginDialog; }
+namespace Ui {
+class LoginDialog;
+}
 
-class LoginDialog : public QDialog
-{
-    Q_OBJECT
+class LoginDialog : public QDialog {
+  Q_OBJECT
 
 public:
-    explicit LoginDialog(QWidget *parent = nullptr);
-    ~LoginDialog();
+  explicit LoginDialog(QWidget *parent = nullptr);
+  ~LoginDialog();
 
-    QString getUserRole() const;
-    QString getUserName() const;
+  QString getUserRole() const;
+  QString getUserName() const;
 
 private slots:
-    void on_btnLogin_clicked();
+  void on_btnLogin_clicked();
 
 private:
-    Ui::LoginDialog *ui;
-    QString m_userRole;
-    QString m_userName;
+  Ui::LoginDialog *ui;
+  QString m_userRole;
+  QString m_userName;
 };
 
 #endif // LOGINDIALOG_H
