@@ -3,7 +3,7 @@
 
 CREATE USER shop_app_user WITH PASSWORD 'secure_shop_pass_2026';
 
-GRANT CONNECT ON DATABASE store_db TO shop_app_user;
+GRANT CONNECT ON DATABASE course_work TO shop_app_user;
 GRANT USAGE ON SCHEMA public TO shop_app_user;
 
 -- Права на существующие объекты

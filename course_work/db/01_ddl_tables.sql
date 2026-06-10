@@ -94,6 +94,8 @@ CREATE TABLE products (
     CONSTRAINT chk_products_name_not_empty CHECK (trim(product_name) <> '')
 );
 
+CREATE INDEX idx_products_retail_price ON prod-ucts(retail_price);
+
 -- =============================================================================
 -- ОПЕРАЦИОННЫЕ ТАБЛИЦЫ (ДОКУМЕНТЫ)
 -- =============================================================================

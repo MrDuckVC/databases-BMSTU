@@ -63,6 +63,9 @@ set(VIEW_SOURCES
     src/views/managers/clientsdialog.cpp
     src/views/managers/clientsdialog.h
     src/views/managers/clientsdialog.ui
+    src/views/managers/orderprocessingdialog.cpp
+    src/views/managers/orderprocessingdialog.h
+    src/views/managers/orderprocessingdialog.ui
     src/views/managers/ordersdialog.cpp
     src/views/managers/ordersdialog.h
     src/views/managers/ordersdialog.ui

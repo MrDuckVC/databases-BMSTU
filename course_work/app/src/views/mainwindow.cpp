@@ -5,6 +5,7 @@
 #include "chartviewdialog.h"
 #include "clientsdialog.h"
 #include "dictionarydialog.h"
+#include "orderprocessingdialog.h"
 #include "ordersdialog.h"
 #include "productsdialog.h"
 #include "reportsdialog.h"
@@ -105,6 +106,6 @@ void MainWindow::on_btnOrders_clicked() {
 }
 
 void MainWindow::on_btnOrderHistory_clicked() {
-  ReportsDialog dialog(ReportsDialog::OrderStatuses, this);
+  OrderProcessingDialog dialog(this);
   dialog.exec();
 }
