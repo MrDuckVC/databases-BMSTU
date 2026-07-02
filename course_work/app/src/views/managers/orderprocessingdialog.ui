@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrderProcessingDialog</class>
+ <widget class="QDialog" name="OrderProcessingDialog">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTableView" name="tableView">
+     <property name="alternatingRowColors"><bool>true</bool></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title"><string>Изменение статуса</string></property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="lblSelectedOrder">
+        <property name="font"><font><bold>true</bold></font></property>
+        <property name="text"><string>Заказ не выбран</string></property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text"><string>Новый статус:</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="cbStatus"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnUpdateStatus">
+        <property name="text"><string>Обновить статус</string></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>
