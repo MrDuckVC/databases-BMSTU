@@ -21,7 +21,7 @@ qrc_*.cpp
 ui_*.h
 Makefile*
 
-# Файлы CMake (если решишь использовать его вместо qmake)
+# Файлы CMake
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
